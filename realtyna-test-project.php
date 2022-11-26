@@ -11,7 +11,47 @@
  * Text Domain:       realtyna-test
  * Domain Path:       /languages
  *
- * @package PowerBlocks
+ * @package Realtyna Test
  */
 
 namespace AmirSasani\RealtynaTest;
+
+// Load composers autoload
+use AmirSasani\RealtynaTest\Movies\MoviesPostType;
+
+if (file_exists(__DIR__ . '/lib/autoload.php')) {
+    require_once __DIR__ . '/lib/autoload.php';
+}
+
+class RealtynaTest
+{
+    private static $instance = null;
+
+    public static function get_instance()
+    {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    public function plugins_loaded()
+    {
+        load_plugin_textdomain(
+            'realtyna-test',
+            false,
+            basename(dirname(__FILE__)) . '/languages'
+        );
+
+
+        add_action('init', [$this, 'init']);
+    }
+
+    public function init()
+    {
+        $moviesPostType = New MoviesPostType();
+    }
+}
+
+$realtynaTest = RealtynaTest::get_instance();
+add_action('plugins_loaded', [$realtynaTest, 'plugins_loaded']);
