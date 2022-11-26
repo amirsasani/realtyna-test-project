@@ -4,12 +4,15 @@ namespace AmirSasani\RealtynaTest\Movies;
 
 class MoviesPostType
 {
-    private string $POST_TYPE_SLUG = "movies";
+    private string $SLUG = "movies";
 
     public function __construct()
     {
         // register Movies post type
-        register_post_type($this->POST_TYPE_SLUG, $this->registerArgs());
+        register_post_type($this->SLUG, $this->registerArgs());
+
+        // register Genres
+        $genresTaxonomy = new GenresTaxonomy($this->SLUG);
     }
 
     public function registerArgs(): array
@@ -73,7 +76,7 @@ class MoviesPostType
             "map_meta_cap" => true,
             "hierarchical" => false,
             "can_export" => true,
-            "rewrite" => ["slug" => $this->POST_TYPE_SLUG, "with_front" => true],
+            "rewrite" => ["slug" => $this->SLUG, "with_front" => true],
             "query_var" => true,
             "menu_icon" => "dashicons-media-video",
             "supports" => ["title", "editor", "thumbnail", "excerpt", "custom-fields"],
