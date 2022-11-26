@@ -13,9 +13,6 @@ class MoviesPostType
 
         // register Genres
         $genresTaxonomy = new GenresTaxonomy($this->SLUG);
-
-        // register Tags
-        $genresTaxonomy = new TagsTaxonomy($this->SLUG);
     }
 
     public function registerArgs(): array
@@ -82,7 +79,8 @@ class MoviesPostType
             "rewrite" => ["slug" => $this->SLUG, "with_front" => true],
             "query_var" => true,
             "menu_icon" => "dashicons-media-video",
-            "supports" => ["title", "editor", "thumbnail", "excerpt", "custom-fields"],
+            "supports" => ["title", "editor", "thumbnail", "excerpt"],
+            "taxonomies" => ["post_tag"],
             "show_in_graphql" => false,
         ];
 
