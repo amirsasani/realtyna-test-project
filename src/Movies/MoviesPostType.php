@@ -13,6 +13,9 @@ class MoviesPostType
 
         // register Genres
         $genresTaxonomy = new GenresTaxonomy($this->SLUG);
+
+        // register Tags
+        $genresTaxonomy = new GenresTaxonomy($this->SLUG);
     }
 
     public function registerArgs(): array
