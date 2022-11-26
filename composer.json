@@ -1,0 +1,22 @@
+{
+    "name": "amir/realtyna-test-project",
+    "description": "A test project from RealTyna. Wordpress plugin",
+    "type": "library",
+    "license": "GPL v2 or later",
+    "autoload": {
+        "psr-4": {
+            "AmirSasani\\RealtynaTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amir Sasani",
+            "email": "sasani.amir.1998@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib"
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
