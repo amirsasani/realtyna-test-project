@@ -8,7 +8,7 @@ class GenresTaxonomy
 
     public function __construct(string $moviesSlug)
     {
-        // register Movies post type
+        // register Genres taxonomy
         register_taxonomy($this->SLUG, [$moviesSlug], $this->registerArgs());
     }
 
@@ -45,7 +45,6 @@ class GenresTaxonomy
             "slug_field_description" => esc_html__("The slug is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.", "realtyna-test"),
             "desc_field_description" => esc_html__("The description is not prominent by default; however, some themes may show it.", "realtyna-test"),
         ];
-
 
         $args = [
             "label" => esc_html__("Genres", "realtyna-test"),
