@@ -1,6 +1,8 @@
 <?php
 
-namespace AmirSasani\RealtynaTest\Movies;
+namespace AmirSasani\RealtynaTest\PostTypes;
+
+use AmirSasani\RealtynaTest\Taxonomies\GenresTaxonomy;
 
 class MoviesPostType
 {
@@ -11,7 +13,7 @@ class MoviesPostType
         // register Movies post type
         register_post_type($this->SLUG, $this->registerArgs());
 
-        // register Genres
+        // register Taxonomies
         $genresTaxonomy = new GenresTaxonomy($this->SLUG);
     }
 
