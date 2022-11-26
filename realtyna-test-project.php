@@ -17,11 +17,11 @@
 namespace AmirSasani\RealtynaTest;
 
 // Load composers autoload
-use AmirSasani\RealtynaTest\Movies\MoviesPostType;
-
 if (file_exists(__DIR__ . '/lib/autoload.php')) {
     require_once __DIR__ . '/lib/autoload.php';
 }
+
+use AmirSasani\RealtynaTest\Movies\MoviesPostType;
 
 class RealtynaTest
 {
