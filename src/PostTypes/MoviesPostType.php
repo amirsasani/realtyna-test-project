@@ -6,6 +6,9 @@ use AmirSasani\RealtynaTest\Taxonomies\GenresTaxonomy;
 
 class MoviesPostType
 {
+
+    use ModifyMoviesRestApiTrait;
+
     private string $SLUG = "movies";
 
     public function __construct()
@@ -15,6 +18,9 @@ class MoviesPostType
 
         // register Taxonomies
         $genresTaxonomy = new GenresTaxonomy($this->SLUG);
+
+        // initialize the rest api
+        $this->modifyMoviesRestApi();
     }
 
     public function registerArgs(): array
