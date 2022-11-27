@@ -7,7 +7,7 @@ use AmirSasani\RealtynaTest\Taxonomies\GenresTaxonomy;
 class MoviesPostType
 {
 
-    use ModifyMoviesRestApiTrait;
+    use ModifyMoviesRestApiTrait, MoviesListShortcode;
 
     private string $SLUG = "movies";
 
@@ -19,8 +19,11 @@ class MoviesPostType
         // register Taxonomies
         $genresTaxonomy = new GenresTaxonomy($this->SLUG);
 
-        // initialize the rest api
+        // modify the rest api
         $this->modifyMoviesRestApi();
+
+        // initialize the movies list shortcode
+        $this->initializeMoviesListShortcode();
     }
 
     public function registerArgs(): array
