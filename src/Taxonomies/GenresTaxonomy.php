@@ -15,14 +15,14 @@ class GenresTaxonomy
     public function registerArgs(): array
     {
         /**
-         * Taxonomy: Taxonomies.
+         * Taxonomy: Genres.
          */
 
         $labels = [
-            "name" => esc_html__("Taxonomies", "realtyna-test"),
+            "name" => esc_html__("Genres", "realtyna-test"),
             "singular_name" => esc_html__("Genre", "realtyna-test"),
-            "menu_name" => esc_html__("Taxonomies", "realtyna-test"),
-            "all_items" => esc_html__("All Taxonomies", "realtyna-test"),
+            "menu_name" => esc_html__("Genres", "realtyna-test"),
+            "all_items" => esc_html__("All Genres", "realtyna-test"),
             "edit_item" => esc_html__("Edit Genre", "realtyna-test"),
             "view_item" => esc_html__("View Genre", "realtyna-test"),
             "update_item" => esc_html__("Update Genre name", "realtyna-test"),
@@ -30,16 +30,16 @@ class GenresTaxonomy
             "new_item_name" => esc_html__("New Genre name", "realtyna-test"),
             "parent_item" => esc_html__("Parent Genre", "realtyna-test"),
             "parent_item_colon" => esc_html__("Parent Genre:", "realtyna-test"),
-            "search_items" => esc_html__("Search Taxonomies", "realtyna-test"),
-            "popular_items" => esc_html__("Popular Taxonomies", "realtyna-test"),
-            "separate_items_with_commas" => esc_html__("Separate Taxonomies with commas", "realtyna-test"),
-            "add_or_remove_items" => esc_html__("Add or remove Taxonomies", "realtyna-test"),
-            "choose_from_most_used" => esc_html__("Choose from the most used Taxonomies", "realtyna-test"),
-            "not_found" => esc_html__("No Taxonomies found", "realtyna-test"),
-            "no_terms" => esc_html__("No Taxonomies", "realtyna-test"),
-            "items_list_navigation" => esc_html__("Taxonomies list navigation", "realtyna-test"),
-            "items_list" => esc_html__("Taxonomies list", "realtyna-test"),
-            "back_to_items" => esc_html__("Back to Taxonomies", "realtyna-test"),
+            "search_items" => esc_html__("Search Genres", "realtyna-test"),
+            "popular_items" => esc_html__("Popular Genres", "realtyna-test"),
+            "separate_items_with_commas" => esc_html__("Separate Genres with commas", "realtyna-test"),
+            "add_or_remove_items" => esc_html__("Add or remove Genres", "realtyna-test"),
+            "choose_from_most_used" => esc_html__("Choose from the most used Genres", "realtyna-test"),
+            "not_found" => esc_html__("No Genres found", "realtyna-test"),
+            "no_terms" => esc_html__("No Genres", "realtyna-test"),
+            "items_list_navigation" => esc_html__("Genres list navigation", "realtyna-test"),
+            "items_list" => esc_html__("Genres list", "realtyna-test"),
+            "back_to_items" => esc_html__("Back to Genres", "realtyna-test"),
             "name_field_description" => esc_html__("The name is how it appears on your site.", "realtyna-test"),
             "parent_field_description" => esc_html__("Assign a parent term to create a hierarchy. The term Jazz, for example, would be the parent of Bebop and Big Band.", "realtyna-test"),
             "slug_field_description" => esc_html__("The slug is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.", "realtyna-test"),
@@ -47,7 +47,7 @@ class GenresTaxonomy
         ];
 
         $args = [
-            "label" => esc_html__("Taxonomies", "realtyna-test"),
+            "label" => esc_html__("Genres", "realtyna-test"),
             "labels" => $labels,
             "public" => true,
             "publicly_queryable" => true,
