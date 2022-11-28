@@ -2,7 +2,7 @@
 
 namespace AmirSasani\RealtynaTest\PostTypes;
 
-trait MoviesListShortcode
+trait MoviesListShortcodeTrait
 {
     public function initializeMoviesListShortcode()
     {
