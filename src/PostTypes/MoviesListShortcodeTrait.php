@@ -38,7 +38,11 @@ trait MoviesListShortcodeTrait
                 } else {
                     $return_string .= '<img src="' . plugins_url('/assets/images/placeholder.png', dirname(__DIR__)) . '">';
                 }
-                $return_string .= '<p>' . get_the_title() . '</p>';
+                $return_string .= '<h3>' . get_the_title() . '</h3>';
+
+				if(has_excerpt()) {
+					$return_string .= '<p class="excerpt">' . wp_trim_words(get_the_excerpt(), 10) . '</p>';
+				}
 
                 $return_string .= '</a>';
             endwhile;
