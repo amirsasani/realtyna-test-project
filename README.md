@@ -1,5 +1,8 @@
 # Realtyna Test Project (Wordpress Plugin)
 
+## `lib` directory
+I use composer for PSR-4 autoloading and changed the `vendor` directory to `lib` and I decided to upload `lib` directory because when cloning the project to WordPress plugins  directory it shows error and needs to run `composer install` command to make it work. 
+
 ## What does this plugin do?
 
 ---
