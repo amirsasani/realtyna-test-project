@@ -28,10 +28,10 @@ class MoviesCountWidget extends WP_Widget
             echo $args['before_title'] . $title . $args['after_title'];
         }
 
-        $moviesCount = 0;
+        $moviesCount = wp_count_posts('movies');
 
         //output
-        echo sprintf(__('There are %d Movies!', 'realtyna-test'), $moviesCount);
+        echo sprintf(__('There are %d Movies!', 'realtyna-test'), $moviesCount->publish);
 
         echo $args['after_widget'];
     }
