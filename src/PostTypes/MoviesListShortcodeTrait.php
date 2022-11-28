@@ -20,10 +20,10 @@ trait MoviesListShortcodeTrait
         $default_posts_per_page = get_option('posts_per_page');
 
         extract(shortcode_atts([
-            'posts' => $default_posts_per_page,
+            'num' => $default_posts_per_page,
         ], $atts));
 
-        query_posts(['orderby' => 'date', 'order' => 'DESC', 'post_type' => 'movies', 'showposts' => $posts]);
+        query_posts(['orderby' => 'date', 'order' => 'DESC', 'post_type' => 'movies', 'showposts' => $num]);
 
 
         wp_enqueue_style('movies-list-shortcode-style');
