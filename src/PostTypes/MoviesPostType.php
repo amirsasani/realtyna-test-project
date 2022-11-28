@@ -7,7 +7,7 @@ use AmirSasani\RealtynaTest\Taxonomies\GenresTaxonomy;
 class MoviesPostType
 {
 
-    use ModifyMoviesRestApiTrait, MoviesListShortcode;
+    use ModifyMoviesRestApiTrait, MoviesListShortcodeTrait;
 
     private string $SLUG = "movies";
 
@@ -24,6 +24,9 @@ class MoviesPostType
 
         // initialize the movies list shortcode
         $this->initializeMoviesListShortcode();
+
+        // initialize the movies count widget
+        $moviesCountWidget = new MoviesCountWidget();
     }
 
     public function registerArgs(): array
