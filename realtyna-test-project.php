@@ -27,7 +27,7 @@ class RealtynaTest
 {
     private static $instance = null;
 
-    public static function get_instance()
+    public static function getInstance()
     {
         if (null === self::$instance) {
             self::$instance = new self();
@@ -35,7 +35,7 @@ class RealtynaTest
         return self::$instance;
     }
 
-    public function plugins_loaded()
+    public function pluginsLoaded()
     {
         load_plugin_textdomain(
             'realtyna-test',
@@ -43,15 +43,21 @@ class RealtynaTest
             basename(dirname(__FILE__)) . '/languages'
         );
 
-
         add_action('init', [$this, 'init']);
+
+	    // initialize the movies count widget
+	    add_action('widgets_init', [$this, 'registerMoviesCountWidget']);
     }
 
     public function init()
     {
         $moviesPostType = New MoviesPostType();
     }
+
+	public function registerMoviesCountWidget() {
+		register_widget('AmirSasani\RealtynaTest\PostTypes\MoviesCountWidget');
+	}
 }
 
-$realtynaTest = RealtynaTest::get_instance();
-add_action('plugins_loaded', [$realtynaTest, 'plugins_loaded']);
+$realtynaTest = RealtynaTest::getInstance();
+add_action('plugins_loaded', [$realtynaTest, 'pluginsLoaded' ]);

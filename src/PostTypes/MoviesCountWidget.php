@@ -13,13 +13,15 @@ class MoviesCountWidget extends WP_Widget
             __('Movies Count Widget', 'realtyna-test'),
             ['description' => __('Display Movies widget', 'realtyna-test')]
         );
+
+
     }
 
     public function widget($args, $instance)
     {
         $title = apply_filters('widget_title', $instance['title']);
 
-        echo $args['before widget'];
+        echo $args['before_widget'];
 
         //if title is present
         if (!empty ($title)) {

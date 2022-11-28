@@ -24,9 +24,6 @@ class MoviesPostType
 
         // initialize the movies list shortcode
         $this->initializeMoviesListShortcode();
-
-        // initialize the movies count widget
-        $moviesCountWidget = new MoviesCountWidget();
     }
 
     public function registerArgs(): array
